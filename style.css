@@ -1,0 +1,50 @@
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+.bg-gradient-custom {
+    background: #d6deff;
+    background: -webkit-linear-gradient(to right, rgba(29,70,237,0.5), rgba(144,223,254,0.5));
+    background: linear-gradient(to right, rgba(29,70,237,0.5), rgba(144,223,254,0.5))
+}
+
+body{
+    background: #a1c4fd;
+    background: -webkit-linear-gradient(to top, rgba(161,196,253,0.5), rgba(194,233,251,0.5));
+    background: linear-gradient(to top, rgba(161,196,253,0.5), rgba(194,233,251,0.5))
+}
+
+h1{
+    color: rgb(238, 217, 219);
+    text-shadow: 2px 3px 4px black ;
+}
+.container-main {
+    background-image: url(baniere.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 80px;
+    margin-bottom: 70px;
+}
+.section-main{
+    margin-top: -70px;
+    padding-bottom: 50px;
+    padding-top:50px;
+}
+
+p{
+    display: block;
+    justify-content: center;
+    text-align: justify;
+    
+}
+
+strong{
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+.col{
+    padding-bottom: 30px;
+}
+

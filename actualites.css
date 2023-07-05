@@ -1,0 +1,27 @@
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+.bg-gradient-custom {
+    background: #d6deff;
+    background: -webkit-linear-gradient(to right, rgba(29,70,237,0.5), rgba(144,223,254,0.5));
+    background: linear-gradient(to right, rgba(29,70,237,0.5), rgba(144,223,254,0.5))
+}
+
+body{
+    background: #a1c4fd;
+    background: -webkit-linear-gradient(to top, rgba(161,196,253,0.5), rgba(194,233,251,0.5));
+    background: linear-gradient(to top, rgba(161,196,253,0.5), rgba(194,233,251,0.5))
+}
+
+.title{
+    padding-top: 30px;
+}
+
+h2{
+    padding-top: 30px;
+}
+.container{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
