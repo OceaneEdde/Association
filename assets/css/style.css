@@ -1,0 +1,430 @@
+/*POLICE */
+@import url('https://fonts.googleapis.com/css2?family=Capriola&display=swap');
+
+*{
+    margin: 0;
+    padding: auto;
+    font-family:'Capriola', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+    scrollbar-color:#191f3f #48497e;
+}
+
+
+/* Navbar */
+.navbar {
+
+    padding: 15px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+
+
+.nav-link {
+    color: #ffffff !important; 
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 30px; 
+    font-size: 16px;
+    text-transform: uppercase; 
+    transition: all 0.3s ease;
+}
+
+
+.nav-link:hover {
+    transform: translateY(-3px);  
+    background-color: rgba(255, 255, 255, 0.1);  
+}
+
+.navbar-toggler-icon {
+    background-color: #20283f; 
+}
+
+
+.navbar-collapse {
+    padding: 15px 30px;
+}
+
+
+.navbar-nav .nav-item {
+    margin-right: 20px;
+}
+
+.bg-img{
+    background-image: url(../img/shark-ban.jpg);
+    background-repeat: no-repeat;
+}
+
+
+
+.banner{
+    height: 1000px;
+    background-size:100%;
+    background-repeat: no-repeat;
+}
+
+.contentBox{
+    font-size: 19px;
+color: white;
+text-align: justify;
+position: absolute;
+width: 46%;
+padding: 200px 80px;
+display: block;
+}
+
+.actu-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.img-actu{
+    margin-bottom: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;           
+    height: 300px;
+    position: relative;
+    padding: 20px;
+}
+
+
+.column-left, .column-center, .column-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 33%;
+    margin: 0 15px;
+}
+
+.support-section {
+    margin-top: 50px;
+    margin-bottom: 80px;
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #196292, #0a3548);
+    color: white;
+}
+
+.support-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+
+.support-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.support-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.support-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    width: 250px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.support-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.support-card i {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #f8edd3;
+}
+
+
+.support-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.support-card p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: #f8edd3;
+    color: #254250;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: #1e3c72;
+}
+
+
+.espace-presse h2{
+    text-align: center;
+    font-size: 28px;
+    margin-top: 20px;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.espace-presse p{
+    text-align: center;
+}
+
+
+#espace-presse {
+    background-color: #32406e;
+    color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    max-width: 800px;
+    margin: 40px auto;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+#espace-presse h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#espace-presse hr {
+    width: 50%;
+    margin: 10px auto;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#espace-presse h3 {
+    font-size: 22px;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+#espace-presse p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#espace-presse strong {
+    color: #FFD700; 
+}
+
+#espace-presse em {
+    font-style: italic;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+
+.connexion {
+    background: url(../img/fond-contact.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.connexion h2{
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.connexion-box {
+    background: rgba(255, 255, 255, 0.418); 
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px); 
+    padding: 30px;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(139, 139, 139, 0.2); 
+}
+
+
+textarea, 
+.input-box input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 25px;
+    outline: none;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding-right: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+textarea::placeholder,
+.input-box input::placeholder {
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.input-box {
+    width: 100%;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+
+.input-box i {
+    position: absolute;
+    transform: translateY(-50%);
+    right: 20px;
+    top: 50%;
+    color: #ffffff;
+    line-height: 1;
+}
+
+
+.msg-btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 25px;
+    outline: none;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.5s;
+    background-color: #fff;
+    color: #000000;
+}
+
+.msg-btn:hover {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+}
+
+
+.remember-forgot,
+.register-link {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+
+.remember-forgot a,
+.register-link a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.remember-forgot a:hover,
+.register-link a:hover {
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#galerie {
+    text-align: center;
+    padding: 50px;
+}
+
+#galerie h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;        
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+
+footer{
+    text-align: center;
+    align-items: center;
+}
+
+.button-up {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 2em;
+    height: 2em;
+    background-color: #8b96c9;
+    border-radius: 50% 50%;
+    -webkit-border-radius: 50% 50%;
+    -moz-border-radius: 50% 50%;
+    -ms-border-radius: 50% 50%;
+    -o-border-radius: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -1,0 +1,1094 @@
+@charset "UTF-8";
+marquee {
+  padding-top: 110px;
+  background-color: #2b1e05;
+}
+
+#banner {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.wps-buttons-to-individual-page-crafter,
+#wps-button-submit-contact-form {
+  background-color: #4e3022;
+  color: #f2e8e8;
+}
+
+.wps-button-up {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 2em;
+  height: 2em;
+  background-color: #AE9A90;
+  border-radius: 50% 50%;
+  -webkit-border-radius: 50% 50%;
+  -moz-border-radius: 50% 50%;
+  -ms-border-radius: 50% 50%;
+  -o-border-radius: 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wps-selection-card {
+  margin: 20px;
+  background-color: #F2E8E8;
+}
+
+.wps-overlay-box {
+  background: rgb(78, 48, 34);
+  opacity: 0.7;
+  position: absolute;
+  bottom: -25px;
+  left: 0px;
+  width: 100%;
+  height: 20%;
+  border-radius: 0px 0px 12px 12px;
+  -webkit-border-radius: 0px 0px 12px 12px;
+  -moz-border-radius: 0px 0px 12px 12px;
+  -ms-border-radius: 0px 0px 12px 12px;
+  -o-border-radius: 0px 0px 12px 12px;
+}
+
+.wps-overlay-text {
+  position: absolute;
+  bottom: 15px;
+  font-size: 25px;
+}
+
+/* --- Styles de base pour le carousel --- */
+.wps-carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+/* --- La piste principale du carousel --- */
+.wps-carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* --- Élément individuel du carousel (image principale) --- */
+.wps-carousel-item {
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+/* --- Images principales --- */
+.wps-carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* --- Boutons de navigation --- */
+.wps-carousel-prev,
+.wps-carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.wps-carousel-prev {
+  left: 10px;
+}
+
+.wps-carousel-next {
+  right: 10px;
+}
+
+.wps-carousel-prev:hover,
+.wps-carousel-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* --- Indicateurs sous forme de points --- */
+.wps-carousel-indicator-point {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.wps-carousel-indicator-point.wps-active {
+  background-color: #333;
+}
+
+/* --- Miniatures en bas --- */
+.wps-carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.wps-carousel-indicator {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.wps-carousel-indicator img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wps-carousel-indicator:hover {
+  transform: scale(1.1);
+  border-color: #333;
+}
+
+/* --- Élément individuel du carousel  --- */
+.wps-carousel-item {
+  position: relative;
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+/* --- Images principales --- */
+.wps-carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* --- Prix dans l'overlay --- */
+.price {
+  font-size: 20px; /* Taille du texte pour le prix */
+  font-weight: bold;
+}
+
+/* --- Styles spécifiques pour le mobile --- */
+@media (max-width: 768px) {
+  .wps-carousel-item img {
+    width: 95%;
+    height: 90vh;
+  }
+  /* Les miniatures ne sont pas visibles en mobile */
+  .wps-carousel-indicator {
+    display: none;
+  }
+  /* Les points restent visibles sur mobile */
+  .wps-carousel-indicator-point {
+    display: inline-block;
+  }
+  /* --- Overlay avec le prix --- */
+  .price-overlay {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    background: rgb(78, 48, 34);
+    color: #fff;
+    padding: 30px;
+    text-align: right;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    opacity: 0.7;
+    z-index: 1;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+  /* --- Prix dans l'overlay --- */
+  .price {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+/* --- Styles spécifiques pour le desktop --- */
+@media (min-width: 769px) {
+  .wps-carousel-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 400px;
+    transform: translatey(-100%);
+    -webkit-transform: translatey(-100%);
+    -moz-transform: translatey(-100%);
+    -ms-transform: translatey(-100%);
+    -o-transform: translatey(-100%);
+  }
+  .wps-carousel-item img {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+  .wps-carousel-indicator {
+    width: 80px;
+    height: 80px;
+    display: flex;
+  }
+  /* Les points ne sont pas visibles sur desktop */
+  .wps-carousel-indicator-point {
+    display: none;
+  }
+  .wps-carousel-prev {
+    margin-left: 300px;
+  }
+  .wps-carousel-next {
+    margin-right: 300px;
+  }
+  .price-overlay {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    /*Déplacel'overlay à 50% de la largeur de l'image*/
+    transform: translateX(-60%);
+    /*Centrel'overlayendécalantdelamoitiédesalargeur*/
+    width: 41.8%;
+    background: rgb(78, 48, 34);
+    /*Fonddégradé*/
+    color: #fff;
+    padding: 30px;
+    text-align: right;
+    /*Alignerletexteduprixàdroite*/
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    opacity: 0.7;
+    /*Rendrel'overlaysemi-transparent*/
+    z-index: 1;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+}
+.wps-interactive-map {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wps-pin {
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  z-index: 5;
+}
+
+.wps-text-crafters-section {
+  line-height: 1.5;
+}
+.wps-text-crafters-section ul {
+  list-style-type: circle;
+}
+.wps-text-crafters-section ul li {
+  margin: 1rem 0 1rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .wps-pin {
+    height: 20px;
+    width: 20px;
+  }
+}
+.wps-buttons-crafters {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#wps-map-bzh {
+  z-index: 1;
+  width: 100%;
+  height: auto;
+}
+
+#wps-pin-elise {
+  bottom: 43.1%;
+  left: 26.5%;
+}
+
+#wps-pin-gwenaelle {
+  top: 19%;
+  left: 13.5%;
+}
+
+#wps-pin-jean-marie {
+  bottom: 35%;
+  left: 39.9%;
+}
+
+#wps-pin-ronan {
+  bottom: 26.4%;
+  left: 70.4%;
+}
+
+#wps-pin-maelle {
+  bottom: 57%;
+  left: 21.5%;
+}
+
+#wps-pin-shop {
+  bottom: 49.5%;
+  left: 21.5%;
+}
+
+.wps-crafters {
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+.wps-style-account,
+.wps-style-user {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wps-main-products {
+  flex: 1;
+}
+
+.wps-footer {
+  margin-top: 5%;
+  background-color: rgb(78, 48, 34);
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+.wps-links-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.wps-link-footer-left {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.wps-link-footer-left:hover {
+  color: #cccccc;
+}
+
+.wps-link-footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.wps-logo-footer {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.wps-copyright {
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin-top: 15px;
+  font-size: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .wps-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  .wps-links-footer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .wps-link-footer-left {
+    margin: 5px;
+  }
+  .wps-link-footer-right {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wps-link-footer-left {
+    font-size: 0.8rem;
+  }
+  .wps-footer {
+    padding: 15px 10px;
+  }
+}
+html {
+  background-color: #F2E8E8;
+}
+
+body {
+  font-family: cormorantGaramond;
+}
+
+.navbar {
+  background-image: url(../../img/navbar.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navbar-item:hover {
+  background-color: transparent !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+.navbar-link {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+.navbar-link:hover {
+  background-color: transparent !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, #221909, #3b301c);
+  opacity: 0.7;
+  z-index: 10;
+}
+
+.banner > * {
+  z-index: 11;
+}
+
+.navbar-dropdown {
+  content: "";
+  position: absolute;
+  background-color: #F2E8E8;
+  z-index: 1;
+}
+
+marquee {
+  padding-top: 110px;
+  background-color: #2b1e05;
+}
+
+#banner {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.navbar-link:not(.is-arrowless)::after {
+  border-color: white;
+}
+
+.width-1 {
+  width: 80px;
+}
+
+.wps-margin {
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.wps-margin-top {
+  margin-top: 10%;
+}
+
+.wps-margin-about {
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.wps-margin-button {
+  margin-top: 2%;
+  margin-left: 2%;
+  padding: 1% !important;
+  border-radius: 15px !important;
+  -webkit-border-radius: 15px !important;
+  -moz-border-radius: 15px !important;
+  -ms-border-radius: 15px !important;
+  -o-border-radius: 15px !important;
+}
+
+.wps-marge-artisan {
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 600px) {
+  .wps-artisans {
+    height: 750px;
+  }
+  .wps-card-artisans {
+    display: block;
+  }
+  .wps-title-artisan {
+    padding-top: 10px;
+    margin-right: 65%;
+    text-align: center;
+  }
+  .wps-text-artisans {
+    text-align: justify;
+    padding-right: 70%;
+    padding-left: 5%;
+  }
+  .wps-image-artisan {
+    margin-bottom: 10px;
+    margin-left: 5.5%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .wps-card-artisans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .wps-title-artisan {
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .wps-image-artisan {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    max-width: 250px;
+    height: auto;
+  }
+  .wps-text-artisans {
+    text-align: justify;
+    margin-bottom: 15px;
+    padding: 0 10px;
+  }
+}
+/* Notification container styles  */
+.wps-notification-container {
+  width: 90%;
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  z-index: 80;
+}
+
+/* Notifications */
+.wps-notification {
+  animation: wps-fadeIn 0.5s ease-out, wps-fadeOut 0.5s 3.5s ease-in forwards;
+}
+
+@media only screen and (max-width: 600px) {
+  .wps-margin-basket {
+    margin-top: 15%;
+  }
+}
+/* Fade-in animation */
+@keyframes wps-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Fade-out animation */
+@keyframes wps-fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+.wps-error-hidden {
+  display: none;
+}
+
+.wps-style-account {
+  background-color: #f2e8e8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wps-create-account {
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  background-color: #AE9A90;
+  padding: 34px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  margin-top: 9.5rem;
+}
+
+.wps-create-account h2 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #4e3022;
+  margin-bottom: 16px;
+  position: relative;
+  text-align: center;
+}
+
+.wps-create-account h2::before {
+  content: "";
+  position: absolute;
+  left: 0.5;
+  bottom: -4px;
+  height: 3px;
+  width: 165px;
+  border-radius: 12px;
+  background-color: #f2e8e8;
+}
+
+.wps-create-account form {
+  margin-top: 34px;
+}
+
+.wps-create-account form .wps-input-box,
+.wps-create-account form .wps-policy-box {
+  position: relative;
+}
+
+.wps-create-account form .wps-input-box {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  margin: 16px 0;
+}
+
+.wps-create-account form .wps-input-box input {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 1.063rem;
+  font-weight: 400;
+  border: 1.5px solid #c7bebe;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.wps-create-account form .wps-policy-box label,
+.wps-create-account form h3 {
+  margin-left: 10px;
+}
+
+.wps-create-account form h3 {
+  color: #4e3022;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.wps-input-box.button {
+  background-color: #AE9A90;
+  border: none;
+  border: 0px;
+}
+
+.wps-input-box.button input {
+  margin-top: 15px;
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background-color: #4e3022;
+  cursor: pointer;
+  height: 50px;
+}
+
+.wps-input-box.button input:hover {
+  background-color: #6e4430;
+}
+
+.wps-create-account form .wps-text h3,
+.wps-create-account form .wps-text .info {
+  color: #333;
+  width: 100%;
+  text-align: center;
+}
+
+.wps-create-account form .wps-text h3 a {
+  color: white;
+  text-decoration: underline;
+}
+
+.wps-create-account form .wps-text h3 a:hover {
+  text-decoration: none;
+}
+
+/* Style pour les messages d'erreur */
+.wps-error-message {
+  position: absolute;
+  bottom: 0;
+  color: #5D1500;
+  font-size: 0.755rem;
+  visibility: hidden;
+  min-height: 0.75em;
+}
+
+#wps-phone-number-error.wps-error-message {
+  bottom: -14px;
+}
+
+#wps-password-error.wps-error-message {
+  bottom: -12px;
+  font-size: 0.655rem;
+}
+
+.wps-policy-box .wps-error-message {
+  bottom: -18px;
+}
+
+.navbar-link::after {
+  border-color: white !important;
+}
+
+/* Afficher dynamiquement le message d'erreur lorsqu'il est rempli */
+.wps-input-box input.error + .wps-error-message {
+  visibility: visible;
+}
+
+/* Styles pour le bouton d'affichage/masquage du mot de passe */
+.wps-toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.modal .modal-content .box.wps-popup-background {
+  background-color: #AE9A90;
+}
+
+.modal .modal-content button.wps-button-bcg {
+  background-color: #4e3022;
+  color: white;
+  border: none;
+}
+
+.wps-burger-header {
+  width: 100%;
+  height: 100vh;
+}
+
+.top-nav {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: -100vh;
+  z-index: 50;
+  background-color: #AE9A90;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  transition: all 650ms cubic-bezier(1, 0, 0, 1);
+}
+
+.nav-list {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* Default to column for mobile */
+}
+
+li {
+  margin: 0 2rem;
+}
+
+.nav-link {
+  font-family: "Florida", sans-serif;
+  font-size: 3.5rem;
+  /* Adjusted for mobile */
+  padding: 1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background: linear-gradient(to top, #AE9A90, #f2e8e8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.top-nav.open {
+  top: 0;
+  border-radius: initial;
+}
+
+.menu-toggler {
+  position: absolute;
+  top: 2rem;
+  /* Adjusted for mobile */
+  right: 2rem;
+  /* Adjusted for mobile */
+  width: 3rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1500;
+  transition: transform 650ms ease-out;
+}
+
+.menu-toggler.open {
+  transform: rotate(-45deg);
+}
+
+.bar {
+  background: linear-gradient(to right, #AE9A90, #f2e8e8);
+  width: 100%;
+  height: 4px;
+  border-radius: 0.8rem;
+}
+
+.bar.half {
+  width: 50%;
+}
+
+.bar.start {
+  transform-origin: right;
+  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.start {
+  transform: rotate(-450deg) translateX(0.8rem);
+}
+
+.bar.end {
+  align-self: flex-end;
+  transform-origin: left;
+  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.end {
+  transform: rotate(-450deg) translateX(-0.8rem);
+}
+
+.wps-newsletter-box {
+  margin-top: 7%;
+}
+
+.wps-background-color {
+  background-color: #f2e8e8;
+}
+
+.wps-text-color {
+  color: #4E3022;
+}
+
+body.wps-page-404 {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../../img/404desktop.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+h2#wps-404-text {
+  text-align: center;
+  color: #4E3022;
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: center;
+  color: #4E3022;
+  margin-bottom: 30px;
+}
+
+.wps-404-button {
+  background-color: #4E3022;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  body.wps-page-404 {
+    background-image: url(../../img/404mobile.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 30px;
+  }
+  h2#wps-404-text {
+    margin-bottom: 15px;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+}
+.wps-margin-navbar {
+  margin-top: 150px;
+}
+
+.wps-custom-image {
+  border-radius: 12px;
+  -webkit-border-radius: 12px 12px 12px 12px;
+  -moz-border-radius: 12px 12px 12px 12px;
+  -ms-border-radius: 12px 12px 12px 12px;
+  -o-border-radius: 12px 12px 12px 12px;
+}
+
+.wps-link {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.wps-tab-title {
+  text-decoration: none;
+  background-color: #f2e8e8 !important;
+}
+
+.wps-text-color {
+  color: #4E3022 !important;
+}
+
+.wps-style-user {
+  background-color: #f2e8e8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wps-user-profil {
+  position: relative;
+  max-width: 650px;
+  width: 100%;
+  background-color: #AE9A90;
+  padding: 34px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  margin-top: 9.5rem;
+}
+
+.wps-card-title {
+  background-color: #4e3022;
+  color: #f2e8e8;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.title.wps-user-title {
+  color: #4e3022;
+}
+
+.wps-tab-box-bcg {
+  background-color: #f2e8e8;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.wps-bcg-tab {
+  background-color: #AE9A90 !important;
+}
+
+.wps-bcg-tab:hover {
+  text-decoration: underline;
+}
+
+.wps-color-text {
+  color: rgb(223, 216, 216) !important;
+}
+
+/*# sourceMappingURL=main.css.map */
